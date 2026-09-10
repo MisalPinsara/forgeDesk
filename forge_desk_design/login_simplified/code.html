@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-high":"#dce9ff","primary-fixed-dim":"#bac3ff","outline":"#747686","on-primary-fixed":"#001159","secondary-fixed":"#dae2fd","surface-bright":"#f8f9ff","primary-fixed":"#dee1ff","on-secondary-fixed-variant":"#3f465c","outline-variant":"#c4c5d7","on-tertiary-container":"#ccffe2","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#4edea3","surface":"#f8f9ff","surface-variant":"#d3e4fe","on-secondary":"#ffffff","error-container":"#ffdad6","background":"#f8f9ff","on-secondary-fixed":"#131b2e","on-primary-container":"#f4f2ff","surface-dim":"#cbdbf5","secondary":"#565e74","secondary-fixed-dim":"#bec6e0","secondary-container":"#dae2fd","surface-container-low":"#eff4ff","inverse-primary":"#bac3ff","tertiary-container":"#007f57","tertiary-fixed":"#6ffbbe","inverse-on-surface":"#eaf1ff","on-surface":"#0b1c30","surface-container-highest":"#d3e4fe","on-surface-variant":"#444655","on-tertiary-fixed-variant":"#005236","error":"#ba1a1a","on-secondary-container":"#5c647a","primary-container":"#4361ee","surface-container":"#e5eeff","on-background":"#0b1c30","primary":"#2346d5","tertiary":"#006443","on-error-container":"#93000a","on-primary-fixed-variant":"#0031c4","surface-tint":"#2e4edc","on-primary":"#ffffff","inverse-surface":"#213145","on-error":"#ffffff","on-tertiary-fixed":"#002113","on-tertiary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-3xl":"3.5rem","space-xl":"2rem","space-xs":"0.5rem","space-md":"1rem","space-2xl":"2.5rem","space-sm":"0.75rem","sidebar-width":"260px","space-xxs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface"><main class="w-full bg-background min-h-screen flex items-center justify-center p-space-xl"><div class="flex flex-col w-full items-center justify-center py-space-xl">
+<div class="w-full max-w-[440px] flex flex-col items-center">
+<!-- Top Brand Mark -->
+<div class="flex flex-col items-center text-center mb-space-xl">
+<div class="w-14 h-14 rounded-2xl bg-error-container flex items-center justify-center shadow-md mb-space-sm transition-transform duration-300 hover:scale-105">
+<span class="material-symbols-outlined text-error text-[30px]" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">WJDMS</h1>
+<p class="font-body-sm text-body-sm text-secondary mt-space-xxs">Workshop Job & Document Management System</p>
+</div>
+<!-- Centered Login Card -->
+<div class="w-full bg-surface-container-lowest rounded-2xl shadow-xl p-space-xl transition-all duration-300">
+<div class="mb-space-lg text-left">
+<h2 class="font-headline-md text-headline-md text-on-surface">Welcome back</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Enter your credentials to access the workshop portal.</p>
+</div>
+<form class="flex flex-col gap-space-md" id="wjdmsLoginForm" onsubmit="event.preventDefault(); triggerAuth();">
+<!-- Identity Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="usernameInput">Email or Username</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none select-none">mail</span>
+<input autocomplete="username" class="w-full h-[44px] pl-10 pr-3.5 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg outline-none transition-all placeholder:text-outline/70 focus:bg-surface-container-lowest focus:shadow-md focus:ring-2 focus:ring-primary-container/30" id="usernameInput" placeholder="e.g. m.jenkins@workshop.local" required="" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="passwordInput">Password</label>
+<button class="font-label-sm text-label-sm text-primary hover:underline transition-colors focus:outline-none" type="button">Forgot passkey?</button>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none select-none">lock</span>
+<input autocomplete="current-password" class="w-full h-[44px] pl-10 pr-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg outline-none transition-all placeholder:text-outline/70 focus:bg-surface-container-lowest focus:shadow-md focus:ring-2 focus:ring-primary-container/30" id="passwordInput" placeholder="Enter your password" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 p-1 text-outline hover:text-on-surface flex items-center justify-center transition-colors focus:outline-none" id="passwordToggleBtn" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="passwordToggleIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Workstation Checkbox & Network Status Indicator -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 focus:ring-offset-0 transition-colors cursor-pointer accent-primary-container" id="rememberWorkstation" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-secondary">Remember this workstation</span>
+</label>
+<div class="flex items-center gap-1.5" title="Local node online">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Node Active</span>
+</div>
+</div>
+<!-- Primary CTA Button -->
+<button class="mt-2 w-full h-[44px] bg-primary-container hover:bg-primary active:scale-[0.99] text-on-primary font-label-md text-label-md rounded-lg shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer" id="signInBtn" type="submit">
+<span id="signInLabel">Sign in</span>
+<span class="material-symbols-outlined text-[18px]" id="signInIcon">arrow_forward</span>
+</button>
+</form>
+<!-- Security Quick Specs Badge Strip -->
+<div class="mt-space-lg pt-space-md border-t-0 flex items-center justify-between text-secondary">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">shield</span>
+<span>End-to-End Vault</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">lan</span>
+<span>Intranet 10GbE</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">badge</span>
+<span>Single-Sign On</span>
+</div>
+</div>
+</div>
+<!-- Machine & Network Telemetry Footer -->
+<div class="mt-space-lg flex flex-col items-center gap-1 text-center">
+<p class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">
+        WJDMS v2.4 • Secure Workshop Network
+      </p>
+<div class="flex items-center gap-2 font-body-sm text-[12px] text-outline">
+<span>Station ID: WS-BAY-08</span>
+<span>•</span>
+<span>Gateway: 192.168.4.1</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function togglePasswordVisibility() {
+    const input = document.getElementById('passwordInput');
+    const icon = document.getElementById('passwordToggleIcon');
+    if (!input || !icon) return;
+
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function triggerAuth() {
+    const btn = document.getElementById('signInBtn');
+    const label = document.getElementById('signInLabel');
+    const icon = document.getElementById('signInIcon');
+    if (!btn || !label || !icon) return;
+
+    btn.disabled = true;
+    btn.classList.add('opacity-80', 'cursor-not-allowed');
+    label.textContent = 'Verifying Credential...';
+    icon.textContent = 'sync';
+    icon.classList.add('animate-spin');
+
+    setTimeout(() => {
+      label.textContent = 'Access Granted';
+      icon.textContent = 'check_circle';
+      icon.classList.remove('animate-spin');
+      btn.classList.remove('bg-primary-container', 'hover:bg-primary');
+      btn.classList.add('bg-tertiary-container');
+    }, 1200);
+  }
+</script></main></body></html>

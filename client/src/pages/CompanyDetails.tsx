@@ -1,0 +1,14 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CompanyFormModal } from '../components/CompanyFormModal';
+import { Card, Icon, PageHeader } from '../components/Ui';
+
+const contacts = [['David Miller', 'Buyer', 'david.miller@apex.example'], ['Marcus Chen', 'Engineer', 'marcus.chen@apex.example']];
+
+export default function CompanyDetails() {
+  const [isUpdating, setIsUpdating] = useState(false);
+  const company = { name: 'Apex Precision Eng.', address: 'Unit 4, Riverside Industrial Estate', mobile: '+44 7700 900000', email: 'info@apex.example' };
+  return <div className="space-y-6"><PageHeader title={company.name} description="Company details and associated contacts." action={<Link to="/companies" className="secondary-button"><Icon>arrow_back</Icon>Companies</Link>} />
+    {isUpdating && <CompanyFormModal company={company} onClose={() => setIsUpdating(false)} />}
+    <Card className="overflow-hidden p-0"><div className="flex items-center justify-between gap-4 border-b border-outline/70 px-6 py-5"><div><h2 className="text-lg font-semibold">Company record</h2><p className="mt-1 text-sm text-muted">Company information and associated contacts.</p></div><div className="flex flex-wrap justify-end gap-3"><button className="secondary-button" type="button" onClick={() => setIsUpdating(true)}><Icon>edit</Icon>Update company</button><button className="secondary-button text-danger" type="button"><Icon>delete</Icon>Delete company</button></div></div><div className="grid xl:grid-cols-[minmax(0,1fr)_360px]"><section className="bg-surface-subtle/40 p-6"><div className="flex items-center justify-between gap-4"><div><h2 className="text-lg font-semibold">Engineers & buyers</h2><p className="mt-1 text-sm text-muted">Contacts associated with this company.</p></div><Link className="text-sm font-semibold text-primary" to="/engineers-buyers">Manage contacts</Link></div><div className="mt-5 divide-y divide-outline/60 rounded-lg border border-outline/70 bg-surface">{contacts.map(([name, type, email]) => <div key={email} className="flex items-center justify-between gap-4 px-5 py-4"><div><p className="font-semibold">{name}</p><p className="mt-0.5 text-sm text-muted">{type} · {email}</p></div><button className="secondary-button h-9 px-3 text-danger">Remove</button></div>)}</div></section><dl className="space-y-5 p-6"><div><dt className="text-sm text-muted">Company name</dt><dd className="mt-1 font-medium text-ink">{company.name}</dd></div><div><dt className="text-sm text-muted">Address</dt><dd className="mt-1 font-medium text-ink">{company.address}</dd></div><div><dt className="text-sm text-muted">Mobile no.</dt><dd className="mt-1 font-medium text-ink">{company.mobile}</dd></div><div><dt className="text-sm text-muted">Company email</dt><dd className="mt-1 font-medium text-ink">{company.email}</dd></div></dl></div></Card></div>;
+}

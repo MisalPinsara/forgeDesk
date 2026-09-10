@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Company {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  address   String
+  mobile    String?
+  email     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  contacts Contact[]
+  jobs     Job[]
+}
+
+model Contact {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  type         String   // "Engineer" | "Buyer"
+  companyId    String   @db.ObjectId
+  mobileNumber String?
+  email        String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  company       Company @relation(fields: [companyId], references: [id])
+  buyerJobs     Job[]   @relation("JobBuyer")
+  engineerJobs  Job[]   @relation("JobEngineer")
+}
+
+model Job {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  description String?
+  companyId   String   @db.ObjectId
+  buyerId     String?  @db.ObjectId
+  engineerId  String?  @db.ObjectId
+  jobDate     DateTime @default(now())
+  price       Float
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  company             Company               @relation(fields: [companyId], references: [id])
+  buyer               Contact?              @relation("JobBuyer", fields: [buyerId], references: [id])
+  engineer            Contact?              @relation("JobEngineer", fields: [engineerId], references: [id])
+  systemDocuments     SystemDocument[]
+  supportingDocuments SupportingDocument[]
+}
+
+model DocumentTemplate {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  documentType     String   @unique // "Quotation" | "Invoice" | "Delivery Note"
+  file             String   // file path or URL
+  originalFilename String
+  uploadedAt       DateTime @default(now())
+
+  systemDocuments SystemDocument[]
+}
+
+model SystemDocument {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  jobId           String   @db.ObjectId
+  documentType    String
+  templateId      String   @db.ObjectId
+  referenceNumber String   @unique
+  generatedFile   String   // file path or URL
+  createdAt       DateTime @default(now())
+
+  job      Job              @relation(fields: [jobId], references: [id])
+  template DocumentTemplate @relation(fields: [templateId], references: [id])
+}
+
+model SupportingDocument {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  jobId            String   @db.ObjectId
+  file             String   // file path or URL
+  originalFilename String
+  uploadedAt       DateTime @default(now())
+
+  job Job @relation(fields: [jobId], references: [id])
+}
+
+model AuditEvent {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  entityType String
+  entityId   String   @db.ObjectId
+  jobId      String?  @db.ObjectId
+  action     String
+  actorId    String
+  actorName  String
+  createdAt  DateTime @default(now())
+}

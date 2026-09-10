@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { min-height: 100%; font-family: Inter, sans-serif; background: #f8f9ff; color: #0b1c30; }
+  body { min-height: 100vh; margin: 0; min-width: 320px; background: #f8f9ff; }
+  #root { min-height: 100vh; }
+  button, input, select, textarea { font: inherit; }
+  button { cursor: pointer; }
+}
+
+@layer components {
+  .field { @apply h-11 w-full rounded-lg border border-outline bg-surface px-3 text-sm text-ink outline-none transition focus:border-primary focus:ring-2 focus:ring-primary-container/20; }
+  .label { @apply mb-1.5 block text-sm font-semibold text-ink; }
+  .card { @apply rounded-xl border border-outline/70 bg-surface p-6 shadow-card; }
+  .secondary-button { @apply inline-flex h-10 items-center justify-center gap-2 rounded-lg border border-outline/70 bg-surface px-4 text-sm font-semibold text-ink transition hover:bg-surface-subtle; }
+  .primary-button { @apply inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-primary-container px-4 text-sm font-semibold text-on-primary shadow-sm transition hover:bg-primary; }
+  .icon-button { @apply inline-flex h-9 w-9 items-center justify-center rounded-lg text-muted transition hover:bg-surface-subtle hover:text-ink; }
+}

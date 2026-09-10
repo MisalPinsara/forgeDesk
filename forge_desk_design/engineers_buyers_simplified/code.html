@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-high":"#dce9ff","primary-fixed-dim":"#bac3ff","outline":"#747686","on-primary-fixed":"#001159","secondary-fixed":"#dae2fd","surface-bright":"#f8f9ff","primary-fixed":"#dee1ff","on-secondary-fixed-variant":"#3f465c","outline-variant":"#c4c5d7","on-tertiary-container":"#ccffe2","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#4edea3","surface":"#f8f9ff","surface-variant":"#d3e4fe","on-secondary":"#ffffff","error-container":"#ffdad6","background":"#f8f9ff","on-secondary-fixed":"#131b2e","on-primary-container":"#f4f2ff","surface-dim":"#cbdbf5","secondary":"#565e74","secondary-fixed-dim":"#bec6e0","secondary-container":"#dae2fd","surface-container-low":"#eff4ff","inverse-primary":"#bac3ff","tertiary-container":"#007f57","tertiary-fixed":"#6ffbbe","inverse-on-surface":"#eaf1ff","on-surface":"#0b1c30","surface-container-highest":"#d3e4fe","on-surface-variant":"#444655","on-tertiary-fixed-variant":"#005236","error":"#ba1a1a","on-secondary-container":"#5c647a","primary-container":"#4361ee","surface-container":"#e5eeff","on-background":"#0b1c30","primary":"#2346d5","tertiary":"#006443","on-error-container":"#93000a","on-primary-fixed-variant":"#0031c4","surface-tint":"#2e4edc","on-primary":"#ffffff","inverse-surface":"#213145","on-error":"#ffffff","on-tertiary-fixed":"#002113","on-tertiary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-3xl":"3.5rem","space-xl":"2rem","space-xs":"0.5rem","space-md":"1rem","space-2xl":"2.5rem","space-sm":"0.75rem","sidebar-width":"260px","space-xxs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-[260px] bg-inverse-surface z-50 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs py-space-xxs"><div class="w-9 h-9 rounded-lg bg-error flex items-center justify-center shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-on-error text-[20px]">precision_manufacturing</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-inverse-on-surface tracking-tight leading-none">WJDMS</span><span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider mt-1">Workshop Core</span></div></div><nav class="flex flex-col gap-space-xxs" data-active-classes="bg-primary text-on-primary font-label-md"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors font-body-md text-body-md" data-path="jobs" href="#"><span class="material-symbols-outlined text-[20px]">construction</span><span>Jobs</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors font-body-md text-body-md" data-path="documents" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span>Documents</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors font-body-md text-body-md" data-path="companies" href="#"><span class="material-symbols-outlined text-[20px]">business</span><span>Companies</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors font-body-md text-body-md" data-path="engineers-and-buyers" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Engineers & Buyers</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors font-body-md text-body-md" data-path="profile" href="#"><span class="material-symbols-outlined text-[20px]">account_circle</span><span>Profile</span></a></nav></div><div class="pt-space-md"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-inverse-on-surface/70 hover:bg-error-container/20 hover:text-error-container transition-colors font-label-md text-label-md" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span>Logout</span></a></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-bright/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="w-full max-w-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-sm text-outline text-[20px] pointer-events-none">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest rounded-lg border border-outline-variant/60 text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:border-primary transition-colors" placeholder="Search jobs, docs, companies..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="w-9 h-9 flex items-center justify-center rounded-lg text-secondary hover:bg-surface-container hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span></button><button class="w-9 h-9 flex items-center justify-center rounded-lg text-secondary hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-6 w-px bg-outline-variant/40 mx-space-xxs"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 px-space-xl py-space-xl bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg w-full max-w-[1280px] mx-auto pb-space-3xl">
+<!-- Top Action Header -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Engineers & Buyers</span>
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">96 Verified</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-0.5">Directory of client technical contacts and procurement liaisons.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="h-10 px-space-md bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md flex items-center gap-space-xs shadow-sm" id="exportCsvBtn">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Directory (CSV)</span>
+</button>
+<button class="h-10 px-space-md bg-primary-container hover:opacity-95 text-on-primary transition-opacity rounded-lg font-label-md text-label-md flex items-center gap-space-xs shadow-md" id="openAddModalBtn">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Add Contact</span>
+</button>
+</div>
+</div>
+<!-- Metrics Bento Strip -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Total Directory</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">96</span>
+<span class="font-body-sm text-body-sm text-tertiary font-semibold flex items-center"><span class="material-symbols-outlined text-[14px]">trending_up</span> +8</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">engineering</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Engineers</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">52</span>
+<span class="font-body-sm text-body-sm text-secondary">Contacts</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">shopping_cart</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Buyers</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">44</span>
+<span class="font-body-sm text-body-sm text-secondary">Contacts</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">domain</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Partner Accounts</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">28</span>
+<span class="font-body-sm text-body-sm text-secondary">Active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Search and Filters Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Search -->
+<div class="md:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-all" id="searchInput" placeholder="Search by name, company, phone, or email..." type="text"/>
+</div>
+<!-- Type Filter -->
+<div class="md:col-span-2 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">filter_alt</span>
+<select class="w-full h-11 pl-9 pr-8 bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest appearance-none cursor-pointer" id="typeFilter">
+<option value="all">All Personnel Types</option>
+<option value="engineer">Engineers Only</option>
+<option value="buyer">Buyers Only</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+<!-- Company Filter -->
+<div class="md:col-span-3 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">corporate_fare</span>
+<select class="w-full h-11 pl-9 pr-8 bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest appearance-none cursor-pointer" id="companyFilter">
+<option value="all">All Companies</option>
+<option value="Apex Precision Eng.">Apex Precision Eng.</option>
+<option value="Vanguard Marine Ltd.">Vanguard Marine Ltd.</option>
+<option value="Solent Machining Co.">Solent Machining Co.</option>
+<option value="Kestrel Dynamics">Kestrel Dynamics</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+<!-- Sort Filter -->
+<div class="md:col-span-2 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">sort_by_alpha</span>
+<select class="w-full h-11 pl-9 pr-8 bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest appearance-none cursor-pointer" id="sortFilter">
+<option value="az">Sort by: Name (A-Z)</option>
+<option value="za">Sort by: Name (Z-A)</option>
+<option value="id">Sort by: Identifier</option>
+<option value="company">Sort by: Company</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Filter Badges / Active State Summary -->
+<div class="flex flex-wrap items-center gap-space-xs mt-space-sm pt-space-xs" id="filterTags">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Quick Views:</span>
+<button class="quick-pill bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-1 rounded-full transition-all" data-quick="all">All (96)</button>
+<button class="quick-pill bg-surface-container text-secondary font-label-sm text-label-sm px-space-sm py-1 rounded-full hover:bg-surface-container-high transition-all" data-quick="engineer">Engineers (52)</button>
+<button class="quick-pill bg-surface-container text-secondary font-label-sm text-label-sm px-space-sm py-1 rounded-full hover:bg-surface-container-high transition-all" data-quick="buyer">Buyers (44)</button>
+<button class="quick-pill bg-surface-container text-secondary font-label-sm text-label-sm px-space-sm py-1 rounded-full hover:bg-surface-container-high transition-all" data-quick="recent">Recently Contacted (14)</button>
+</div>
+</div>
+<!-- Contact Directory Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">Contact & Identifier</th>
+<th class="py-3 px-space-md font-semibold">Personnel Role</th>
+<th class="py-3 px-space-md font-semibold">Company / Client</th>
+<th class="py-3 px-space-md font-semibold">Direct Phone</th>
+<th class="py-3 px-space-md font-semibold">Email Liaison</th>
+<th class="py-3 px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-transparent" id="directoryBody">
+<!-- Row 1 -->
+<tr class="contact-row hover:bg-surface-container/60 transition-colors" data-company="Apex Precision Eng." data-email="m.chen@apexprecision.co.uk" data-id="ENG-4401" data-name="Marcus Chen" data-phone="+44 7700 900142" data-type="engineer">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    MC
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface tracking-tight">Marcus Chen</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-normal">ID: ENG-4401</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Engineer
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px] text-secondary">business</span>
+<span>Apex Precision Eng.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="tel:+447700900142">
+<span class="material-symbols-outlined text-[15px]">call</span>
+                  +44 7700 900142
+                </a>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1 truncate max-w-[210px]" href="mailto:m.chen@apexprecision.co.uk">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+                  m.chen@apexprecision.co.uk
+                </a>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xxs">
+<button class="edit-btn p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Edit Contact">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="delete-btn p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/30 transition-colors" title="Delete Contact">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="contact-row hover:bg-surface-container/60 transition-colors bg-surface-container-low/30" data-company="Apex Precision Eng." data-email="d.miller@apexprecision.co.uk" data-id="BUY-1029" data-name="David Miller" data-phone="+44 7700 900388" data-type="buyer">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    DM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface tracking-tight">David Miller</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-normal">ID: BUY-1029</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Buyer
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px] text-secondary">business</span>
+<span>Apex Precision Eng.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="tel:+447700900388">
+<span class="material-symbols-outlined text-[15px]">call</span>
+                  +44 7700 900388
+                </a>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1 truncate max-w-[210px]" href="mailto:d.miller@apexprecision.co.uk">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+                  d.miller@apexprecision.co.uk
+                </a>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xxs">
+<button class="edit-btn p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Edit Contact">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="delete-btn p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/30 transition-colors" title="Delete Contact">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="contact-row hover:bg-surface-container/60 transition-colors" data-company="Vanguard Marine Ltd." data-email="toconnor@vanguardmarine.co.uk" data-id="BUY-1033" data-name="Tim O'Connor" data-phone="+44 7700 900411" data-type="buyer">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    TO
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface tracking-tight">Tim O'Connor</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-normal">ID: BUY-1033</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Buyer
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px] text-secondary">business</span>
+<span>Vanguard Marine Ltd.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="tel:+447700900411">
+<span class="material-symbols-outlined text-[15px]">call</span>
+                  +44 7700 900411
+                </a>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1 truncate max-w-[210px]" href="mailto:toconnor@vanguardmarine.co.uk">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+                  toconnor@vanguardmarine.co.uk
+                </a>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xxs">
+<button class="edit-btn p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Edit Contact">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="delete-btn p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/30 transition-colors" title="Delete Contact">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="contact-row hover:bg-surface-container/60 transition-colors bg-surface-container-low/30" data-company="Vanguard Marine Ltd." data-email="a.walker@vanguardmarine.co.uk" data-id="ENG-4408" data-name="Alan Walker" data-phone="+44 7700 900567" data-type="engineer">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    AW
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface tracking-tight">Alan Walker</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-normal">ID: ENG-4408</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Engineer
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px] text-secondary">business</span>
+<span>Vanguard Marine Ltd.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="tel:+447700900567">
+<span class="material-symbols-outlined text-[15px]">call</span>
+                  +44 7700 900567
+                </a>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1 truncate max-w-[210px]" href="mailto:a.walker@vanguardmarine.co.uk">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+                  a.walker@vanguardmarine.co.uk
+                </a>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xxs">
+<button class="edit-btn p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Edit Contact">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="delete-btn p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/30 transition-colors" title="Delete Contact">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="contact-row hover:bg-surface-container/60 transition-colors" data-company="Solent Machining Co." data-email="svance@solentmachining.com" data-id="BUY-1044" data-name="Sarah Vance" data-phone="+44 7700 900789" data-type="buyer">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    SV
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface tracking-tight">Sarah Vance</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-normal">ID: BUY-1044</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Buyer
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px] text-secondary">business</span>
+<span>Solent Machining Co.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="tel:+447700900789">
+<span class="material-symbols-outlined text-[15px]">call</span>
+                  +44 7700 900789
+                </a>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1 truncate max-w-[210px]" href="mailto:svance@solentmachining.com">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+                  svance@solentmachining.com
+                </a>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xxs">
+<button class="edit-btn p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Edit Contact">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="delete-btn p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/30 transition-colors" title="Delete Contact">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="contact-row hover:bg-surface-container/60 transition-colors bg-surface-container-low/30" data-company="Solent Machining Co." data-email="e.rostova@solentmachining.com" data-id="ENG-4415" data-name="Elena Rostova" data-phone="+44 7700 900892" data-type="engineer">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    ER
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface tracking-tight">Elena Rostova</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-normal">ID: ENG-4415</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Engineer
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px] text-secondary">business</span>
+<span>Solent Machining Co.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="tel:+447700900892">
+<span class="material-symbols-outlined text-[15px]">call</span>
+                  +44 7700 900892
+                </a>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1 truncate max-w-[210px]" href="mailto:e.rostova@solentmachining.com">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+                  e.rostova@solentmachining.com
+                </a>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xxs">
+<button class="edit-btn p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Edit Contact">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="delete-btn p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/30 transition-colors" title="Delete Contact">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="contact-row hover:bg-surface-container/60 transition-colors" data-company="Kestrel Dynamics" data-email="r.green@kestreldynamics.co.uk" data-id="BUY-1051" data-name="Rachel Green" data-phone="+44 7700 900223" data-type="buyer">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    RG
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface tracking-tight">Rachel Green</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-normal">ID: BUY-1051</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Buyer
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px] text-secondary">business</span>
+<span>Kestrel Dynamics</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="tel:+447700900223">
+<span class="material-symbols-outlined text-[15px]">call</span>
+                  +44 7700 900223
+                </a>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1 truncate max-w-[210px]" href="mailto:r.green@kestreldynamics.co.uk">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+                  r.green@kestreldynamics.co.uk
+                </a>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xxs">
+<button class="edit-btn p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Edit Contact">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="delete-btn p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/30 transition-colors" title="Delete Contact">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8 -->
+<tr class="contact-row hover:bg-surface-container/60 transition-colors bg-surface-container-low/30" data-company="Kestrel Dynamics" data-email="k.patel@kestreldynamics.co.uk" data-id="ENG-4422" data-name="Kavita Patel" data-phone="+44 7700 900334" data-type="engineer">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    KP
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface tracking-tight">Kavita Patel</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-normal">ID: ENG-4422</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Engineer
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px] text-secondary">business</span>
+<span>Kestrel Dynamics</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="tel:+447700900334">
+<span class="material-symbols-outlined text-[15px]">call</span>
+                  +44 7700 900334
+                </a>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1 truncate max-w-[210px]" href="mailto:k.patel@kestreldynamics.co.uk">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+                  k.patel@kestreldynamics.co.uk
+                </a>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xxs">
+<button class="edit-btn p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Edit Contact">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="delete-btn p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/30 transition-colors" title="Delete Contact">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Pagination Strip -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-md">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary">
+<span>Showing <strong class="text-on-surface font-semibold">1-8</strong> of <strong class="text-on-surface font-semibold">96</strong> contacts</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>Page 1 of 12</span>
+</div>
+<div class="flex items-center gap-space-xs self-center">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-secondary/60 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-md text-label-md">1</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg text-secondary hover:bg-surface-container transition-colors font-label-md text-label-md">2</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg text-secondary hover:bg-surface-container transition-colors font-label-md text-label-md">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg text-secondary hover:bg-surface-container transition-colors font-label-md text-label-md">12</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-secondary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Insights Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<span class="font-headline-md text-headline-md text-on-surface">Recent Liaison Actions</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Today</span>
+</div>
+<div class="flex flex-col gap-space-sm divide-y divide-transparent">
+<div class="flex items-start gap-space-sm py-1">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-2"></span>
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface font-semibold">RFQ Review scheduled with David Miller</span>
+<span class="text-secondary text-[12px]">Apex Precision Eng. • 10:45 AM</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm py-1">
+<span class="w-2 h-2 rounded-full bg-primary mt-2"></span>
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface font-semibold">CAD specs approved by Elena Rostova</span>
+<span class="text-secondary text-[12px]">Solent Machining Co. • 09:15 AM</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified_user</span>
+<span class="font-headline-md text-headline-md text-on-surface">Data Integrity</span>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">100% Synced</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary">All 96 personnel records are linked with active procurement channels, active VAT tax status, and workshop compliance.</p>
+<div class="mt-space-md flex items-center gap-space-sm">
+<button class="h-9 px-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Run Sync Audit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Add/Edit Modal (Embedded Overlay) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 hidden items-center justify-center p-space-md" id="contactModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-lg w-full p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface" id="modalTitle">Add New Contact</span>
+</div>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-surface-container flex items-center justify-center transition-colors" id="closeModalBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-sm" id="contactForm">
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Full Name</label>
+<input class="h-10 px-space-sm bg-surface-container-low rounded-lg text-on-surface text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest" id="formName" placeholder="e.g. Jordan Blake" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Identifier / Badge</label>
+<input class="h-10 px-space-sm bg-surface-container-low rounded-lg text-on-surface text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest" id="formId" placeholder="e.g. ENG-4430" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Personnel Role</label>
+<select class="h-10 px-space-sm bg-surface-container-low rounded-lg text-on-surface text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest" id="formRole">
+<option value="engineer">Engineer</option>
+<option value="buyer">Buyer</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Client Company</label>
+<input class="h-10 px-space-sm bg-surface-container-low rounded-lg text-on-surface text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest" id="formCompany" placeholder="e.g. Apex Precision Eng." required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Email Address</label>
+<input class="h-10 px-space-sm bg-surface-container-low rounded-lg text-on-surface text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest" id="formEmail" placeholder="name@company.co.uk" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Phone Number</label>
+<input class="h-10 px-space-sm bg-surface-container-low rounded-lg text-on-surface text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest" id="formPhone" placeholder="+44 7700 900000" type="tel"/>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-space-sm pt-space-xs">
+<button class="h-10 px-space-md rounded-lg text-secondary hover:bg-surface-container font-label-md text-label-md transition-colors" id="cancelModalBtn" type="button">Cancel</button>
+<button class="h-10 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:opacity-90 transition-opacity" type="submit">Save Liaison</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Notification Toast -->
+<div class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl hidden items-center gap-space-xs z-50 text-body-sm font-body-sm" id="toast">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check_circle</span>
+<span id="toastMsg">Action completed successfully</span>
+</div>
+</div>
+<script>
+  (function() {
+    const searchInput = document.getElementById('searchInput');
+    const typeFilter = document.getElementById('typeFilter');
+    const companyFilter = document.getElementById('companyFilter');
+    const sortFilter = document.getElementById('sortFilter');
+    const rows = Array.from(document.querySelectorAll('.contact-row'));
+    const quickPills = document.querySelectorAll('.quick-pill');
+    const exportBtn = document.getElementById('exportCsvBtn');
+    const contactModal = document.getElementById('contactModal');
+    const openAddModalBtn = document.getElementById('openAddModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const cancelModalBtn = document.getElementById('cancelModalBtn');
+    const contactForm = document.getElementById('contactForm');
+    const modalTitle = document.getElementById('modalTitle');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+
+    function showToast(msg) {
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 3000);
+    }
+
+    function filterRows() {
+      const q = searchInput.value.toLowerCase().trim();
+      const type = typeFilter.value;
+      const company = companyFilter.value;
+
+      rows.forEach(row => {
+        const name = row.dataset.name.toLowerCase();
+        const rowCompany = row.dataset.company;
+        const rowType = row.dataset.type;
+        const id = row.dataset.id.toLowerCase();
+        const email = row.dataset.email.toLowerCase();
+        const phone = row.dataset.phone.toLowerCase();
+
+        const matchesSearch = !q || name.includes(q) || rowCompany.toLowerCase().includes(q) || id.includes(q) || email.includes(q) || phone.includes(q);
+        const matchesType = type === 'all' || rowType === type;
+        const matchesCompany = company === 'all' || rowCompany === company;
+
+        if (matchesSearch && matchesType && matchesCompany) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterRows);
+    typeFilter.addEventListener('change', filterRows);
+    companyFilter.addEventListener('change', filterRows);
+
+    sortFilter.addEventListener('change', function() {
+      const val = this.value;
+      const parent = document.getElementById('directoryBody');
+      const sorted = [...rows].sort((a, b) => {
+        if (val === 'az') return a.dataset.name.localeCompare(b.dataset.name);
+        if (val === 'za') return b.dataset.name.localeCompare(a.dataset.name);
+        if (val === 'id') return a.dataset.id.localeCompare(b.dataset.id);
+        if (val === 'company') return a.dataset.company.localeCompare(b.dataset.company);
+        return 0;
+      });
+      sorted.forEach(el => parent.appendChild(el));
+    });
+
+    quickPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        quickPills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container', 'text-secondary');
+        });
+        pill.classList.remove('bg-surface-container', 'text-secondary');
+        pill.classList.add('bg-primary', 'text-on-primary');
+
+        const filter = pill.dataset.quick;
+        if (filter === 'all') {
+          typeFilter.value = 'all';
+        } else if (filter === 'engineer') {
+          typeFilter.value = 'engineer';
+        } else if (filter === 'buyer') {
+          typeFilter.value = 'buyer';
+        }
+        filterRows();
+      });
+    });
+
+    // Delete contact button handlers
+    document.querySelectorAll('.delete-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const row = this.closest('tr');
+        const contactName = row.dataset.name;
+        if (confirm(`Remove contact "${contactName}" from directory?`)) {
+          row.remove();
+          showToast(`Contact "${contactName}" deleted.`);
+        }
+      });
+    });
+
+    // Edit contact button handlers
+    document.querySelectorAll('.edit-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const row = this.closest('tr');
+        modalTitle.textContent = 'Edit Contact';
+        document.getElementById('formName').value = row.dataset.name;
+        document.getElementById('formId').value = row.dataset.id;
+        document.getElementById('formRole').value = row.dataset.type;
+        document.getElementById('formCompany').value = row.dataset.company;
+        document.getElementById('formEmail').value = row.dataset.email;
+        document.getElementById('formPhone').value = row.dataset.phone;
+        contactModal.classList.remove('hidden');
+        contactModal.classList.add('flex');
+      });
+    });
+
+    // Add Modal Handlers
+    openAddModalBtn.addEventListener('click', () => {
+      modalTitle.textContent = 'Add New Contact';
+      contactForm.reset();
+      contactModal.classList.remove('hidden');
+      contactModal.classList.add('flex');
+    });
+
+    function closeModal() {
+      contactModal.classList.add('hidden');
+      contactModal.classList.remove('flex');
+    }
+
+    closeModalBtn.addEventListener('click', closeModal);
+    cancelModalBtn.addEventListener('click', closeModal);
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      closeModal();
+      showToast('Contact saved successfully.');
+    });
+
+    // CSV export micro-interaction
+    exportBtn.addEventListener('click', () => {
+      const csvData = [
+        ['Name', 'Identifier', 'Role', 'Company', 'Phone', 'Email'],
+        ...rows.map(r => [
+          r.dataset.name,
+          r.dataset.id,
+          r.dataset.type,
+          r.dataset.company,
+          r.dataset.phone,
+          r.dataset.email
+        ])
+      ].map(e => e.join(',')).join('\\n');
+
+      const blob = new Blob([csvData], { type: 'text/csv' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.setAttribute('href', url);
+      a.setAttribute('download', 'engineers_buyers_directory.csv');
+      a.click();
+      showToast('Directory CSV downloaded.');
+    });
+  })();
+</script></main></div></body></html>
